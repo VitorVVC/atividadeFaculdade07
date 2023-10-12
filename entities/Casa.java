@@ -1,14 +1,14 @@
 package entities;
 
 public class Casa extends Imovel {
-
+	// Criando variavel Boolean para TER ou NÃO um quintal
 	private boolean quintal;
-
+	// Construtor
 	public Casa(double area, int quantidadeQuartos, double precoCompra, boolean quintal) {
 		super(area, quantidadeQuartos, precoCompra);
 		this.quintal = quintal;
 	}
-
+	// Sobrescrever o método de IMOVEL que é um método obrigatório por classes herdadas do mesmo
 	@Override
 	public double calculaPreco() {
 		double precoVenda = 0;
@@ -23,7 +23,7 @@ public class Casa extends Imovel {
 		}
 		return precoVenda;
 	}
-
+	// Gets & Setters
 	public boolean isQuintal() {
 		return quintal;
 	}
